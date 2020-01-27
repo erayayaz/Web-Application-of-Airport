@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Selection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+        .HeadLine{
+            text-align:center;
+            font-size:50px;
+        }
+    </style>
+</head>
+<body>
+    <p class="HeadLine">Please select which type of flight!</p>
+    <div>
+        <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Add Cargo Flight</h4>
+                </div>
+                <div class="card-body">
+                    <button id="buttonCargo" type="button" class="btn btn-lg btn-block btn-primary">Add Cargo Flight</button>
+                    <script type="text/javascript">
+                        document.getElementById("buttonCargo").onclick = function () {
+                            location.href = "/AddFlight/AddCargoFlight";
+                        };
+                    </script>
+                </div>
+            </div>
+            <div class="card mb-4 box-shadow">
+                <div class="card-header">
+                    <h4 class="my-0 font-weight-normal">Add Passenger Flight</h4>
+                </div>
+                <div class="card-body">
+                    <button id="buttonPassenger" type="button" class="btn btn-lg btn-block btn-primary">Add Passenger Flight</button>
+                    <script type="text/javascript">
+                        document.getElementById("buttonPassenger").onclick = function () {
+                            location.href = "/AddFlight/AddPassengerFlight";
+                        };
+                    </script>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

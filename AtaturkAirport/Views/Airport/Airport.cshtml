@@ -1,0 +1,40 @@
+﻿@using AtaturkAirport.Models;
+@model IEnumerable<AirportModel>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Airports List</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <br />
+    <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Airport ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">City</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                    <tr>
+                        <td><a href="/Airport/Show/@item.ID">@item.ID</a></td>
+                        <td>@item.Name</td>
+                        <td>@item.City</td>
+                    </tr>
+                    }
+                </table>
+    </div>
+</body>
+</html>

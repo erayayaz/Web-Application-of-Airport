@@ -1,0 +1,47 @@
+﻿@using AtaturkAirport.Models;
+@model IEnumerable<PassengerInfo>
+@{
+    Layout = "~/Views/Shared/_ManagerLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Passengers</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div>
+        <div class="container">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Passenger TCKN</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Gender</th>
+                        <th scope="col">Luggage Weight</th>
+                        <th scope="col">City</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var passenger in Model)
+                    {
+                    <tr>
+                        <td>@passenger.TCKN</td>
+                        <td>@passenger.name</td>
+                        <td>@passenger.gender</td>
+                        <td>@passenger.luggageWeight</td>
+                        <td>@passenger.city</td>
+                    </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

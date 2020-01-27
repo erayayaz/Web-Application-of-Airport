@@ -1,0 +1,37 @@
+﻿@using AtaturkAirport.Models
+@model AirportModel
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Show</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <br />
+    <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Airport ID</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">City</th>
+                    </tr>
+                </thead>
+                <tbody>                  
+                    <tr>
+                        <td>@Model.ID</td>
+                        <td>@Model.City</td>
+                        <td>@Model.Name</td>
+                    </tr>
+                    
+            </table>
+    </div>
+    
+</body>
+</html>

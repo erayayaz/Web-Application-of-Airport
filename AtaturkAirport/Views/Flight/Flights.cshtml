@@ -1,0 +1,45 @@
+﻿@using AtaturkAirport.Models;
+@model IEnumerable<Flight>
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Flights</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    <div>
+        <div class="container">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Flight ID</th>
+                        <th scope="col">Flight Date</th>
+                        <th scope="col">Flight Time</th>
+                        <th scope="col">Goes To</th>
+                        <th scope="col">Comes From</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var flight in Model)
+                    {
+                        <tr>
+                            <td>@flight.FlightID</td>
+                            <td>@flight.FlightDate</td>
+                            <td>@flight.FlightTime</td>
+                            <td>@flight.GoesTo</td>
+                            <td>@flight.ComesFrom</td>
+                        </tr>
+                    }
+            </table>
+        </div>
+    </div>
+</body>
+</html>
